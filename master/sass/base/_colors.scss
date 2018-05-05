@@ -1,0 +1,43 @@
+$d1: #040A0F;
+$d2: #102131;
+$p: #4271F5;
+$s: #A261F7;
+
+// Darken
+$d1-d: darken($d1, 20%);
+$d2-d: darken($d2, 20%);
+$p-d: darken($p, 20%);
+$s-d: darken($s, 20%);
+
+// Lighten
+$d1-l: lighten($d1, 20%);
+$d2-l: lighten($d2, 20%);
+$p-l: lighten($p, 20%);
+$s-l: lighten($s, 20%);
+
+h1, h3, h4, h5 {
+  color: $d2;
+}
+
+h2 {
+  color: $p;
+}
+
+.d1, .d2, .pri, .sec {
+  h1, h2, h3, h4, h5, p, a, li {
+    color:white;
+  }
+}
+
+.d1 {
+  background:$d1;
+}
+.d2 {
+  background:$d2;
+}
+.pri {
+  background:$p;
+}
+.sec {
+  background:$s;
+}

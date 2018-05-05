@@ -1,0 +1,42 @@
+$generalpadding: 110px;
+$devicepadding: 60px;
+
+$device-h-pad: 35px;
+
+
+/*------------------------------------*
+General Settings
+*------------------------------------*/
+
+section, footer {
+  padding: $generalpadding 0;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    padding: $devicepadding 0;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  @include media-breakpoint-down(lg) {
+    padding-left: $device-h-pad;
+    padding-right: $device-h-pad;
+  }
+}
+
+.container-fluid {
+  padding-left: $device-h-pad;
+  padding-right: $device-h-pad;
+  @include media-breakpoint-up(lg) {
+    padding-left: $generalpadding / 1.3;
+    padding-right: $generalpadding / 1.3;
+
+  }
+}
+
+.rounded {
+  border-radius: 7px;
+}

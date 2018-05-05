@@ -1,0 +1,21 @@
+// contains global mixins, functions, helper selectors, etc.
+@import 'utils/glob';
+
+// contains 3rd-party styles, mixins, etc.
+@import 'vendors/glob';
+
+// contains global styles, such as resets, typography, colors, etc.
+@import 'base/glob';
+
+//contains each self-contained component in its own .scss partial
+@import 'components/glob';
+
+// contains styling for larger layout components; e.g. nav, header, footer, etc.
+@import 'layout/glob';
+
+// contains page-specific styling, if necessary
+@import 'pages/glob';
+
+// contains styling for different themes
+@import 'themes/glob';
+

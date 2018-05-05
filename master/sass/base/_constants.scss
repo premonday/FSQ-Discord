@@ -1,0 +1,370 @@
+/*------------------------------------*
+Titles
+*------------------------------------*/
+
+.title {
+  padding-bottom: $generalpadding / 1.5;
+  @include media-breakpoint-down(sm) {
+    padding-bottom: $devicepadding / 1.5;
+  }
+}
+
+/*------------------------------------*
+Box Shadow
+*------------------------------------*/
+
+.boxshadow {
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.07);
+}
+
+/*------------------------------------*
+Borders
+*------------------------------------*/
+
+.border-settings {
+  &::before {
+    @include pseudo;
+    width: 100%;
+    background: $dark;
+    height: 1px;
+    max-width: 1140px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    opacity: 0.1;
+  }
+}
+
+.bbot {
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.btop {
+  border-top:1px solid rgba(0,0,0,0.1);
+}
+.btop-w {
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.bbot-w {
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.border {
+  &-bot, &-bot-w {
+    position: relative;
+    @extend .border-settings;
+    &::before {
+      bottom: 0;
+      @include media-breakpoint-down(lg) {
+        width:calc(100% - #{$device-h-pad * 2});
+      }
+    }
+  }
+  &-full-bot, &-full-bot-w {
+    position: relative;
+    @extend .border-settings;
+    &::before {
+      bottom: 0;
+      max-width:100%;
+    }
+  }
+  &-top, &-top-w {
+    position:relative;
+    top:0;
+    @extend .border-settings;
+    &::before {
+      top: 0;
+      @include media-breakpoint-down(lg) {
+        width:calc(100% - #{$device-h-pad * 2});
+      }
+    }
+  }
+  &-full-top, &-full-top-w {
+    position: relative;
+    @extend .border-settings;
+    &::before {
+      top: 0;
+      max-width:100%;
+    }
+  }
+}
+
+.border-bot-w, .border-top-w {
+  &::before {
+    background: $white;
+  }
+}
+
+
+/*------------------------------------*
+Paddings
+*------------------------------------*/
+
+.pad-30 {
+  padding: 30px;
+}
+
+.pad-50 {
+  padding: 50px;
+}
+
+.vpad-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.vpad-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.vpad-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.vpad-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.vpad-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+// Remove section padding
+.no-pad {
+  padding: 0;
+}
+
+.no-pad-top {
+  padding-top: 0;
+}
+
+.no-pad-bot {
+  padding-bottom: 0;
+}
+
+
+/*------------------------------------*
+Margins
+*------------------------------------*/
+
+.top-50 {
+  margin-top: 50px;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0px;
+  }
+}
+
+.bot-10 {
+  margin-bottom: 10px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0px;
+  }
+}
+
+.bot-30 {
+  margin-bottom: 30px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0px;
+  }
+}
+
+.bot-50 {
+  margin-bottom: 50px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+/*------------------------------------*
+Column spacing
+*------------------------------------*/
+
+.m-space>[class*='col-'] {
+  padding-bottom: 40px;
+  padding-top: 0px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    padding-bottom: 25px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 25px;
+    padding-top: 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+
+
+/*------------------------------------*
+Spacer
+*------------------------------------*/
+
+.spacer {
+  width: 100%;
+  display: block;
+  background: transparent;
+  height: 30px;
+}
+
+
+
+
+/*------------------------------------*
+Alignments
+*------------------------------------*/
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+  &-mleft {
+    text-align: right;
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+
+/*------------------------------------*
+Heights & Widths
+*------------------------------------*/
+
+.h-full {
+  height: 100%;
+}
+
+[data-height="400"] {
+  height: 400px;
+  >.row {
+    height: 100%;
+  }
+}
+[data-height="500"] {
+  height: 500px;
+  >.row {
+    height: 100%;
+  }
+}
+[data-height="600"] {
+  height: 600px;
+  >.row {
+    height: 100%;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+.vh-full {
+  height: 100vh;
+}
+
+/*------------------------------------*
+Image settings
+*------------------------------------*/
+
+.img-fw {
+  img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.br-2 {
+  border-radius: 2px;
+}
+
+.br-3 {
+  border-radius: 3px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+img.center {
+  margin: 0 auto;
+}
+
+/*------------------------------------*
+Vertical Alignments
+*------------------------------------*/
+
+.start {
+  align-self: flex-start;
+}
+
+.middle {
+  align-self: center;
+}
+
+.end {
+  align-self: flex-end;
+}
+
+/*------------------------------------*
+Overlays
+*------------------------------------*/
+
+[data-overlay] {
+  position: relative;
+}
+
+[data-overlay]:before {
+  position: absolute;
+  content: '';
+  background-color: $dark;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+[data-overlay="9"]:before {
+  opacity: 0.9;
+}
+
+[data-overlay="8"]:before {
+  opacity: 0.8;
+}
+
+[data-overlay="7"]:before {
+  opacity: 0.7;
+}
+
+[data-overlay="6"]:before {
+  opacity: 0.6;
+}
+
+[data-overlay="5"]:before {
+  opacity: 0.5;
+}
+
+[data-overlay="4"]:before {
+  opacity: 0.4;
+}
