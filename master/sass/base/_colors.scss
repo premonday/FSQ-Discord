@@ -24,20 +24,32 @@ h2 {
 }
 
 .d1, .d2, .pri, .sec {
-  h1, h2, h3, h4, h5, p, a, li {
+  h1, h2, h3, h4, h5, p, a, li, i {
     color:white;
   }
 }
 
-.d1 {
-  background:$d1;
+h2.tp {
+  color:$p;
 }
-.d2 {
-  background:$d2;
+h2.ts {
+  color:$s;
 }
-.pri {
-  background:$p;
+
+body {
+  background:url(/dist/img/bg.jpg) top center no-repeat $d1;
+  background-size:cover;
 }
-.sec {
-  background:$s;
-}
+
+// .d1 {
+//   background:$d1;
+// }
+// .d2 {
+//   background:$d2;
+// }
+// .pri {
+//   background:$p;
+// }
+// .sec {
+//   background:$s;
+// }

@@ -1,0 +1,10 @@
+.btn {
+  padding:10px 20px;
+  background:$p;
+  @extend .br;
+  @include t1;
+  &:hover {
+    background:$s;
+    text-decoration:none;
+  }
+}

@@ -1,0 +1,29 @@
+.process {
+  padding-top:100px;
+  .process__number {
+    width:50px;
+    height:50px;
+    border-radius:100%;
+    background:$p;
+    display:inline-block;
+    line-height:50px;
+    font-style:normal;
+    position:relative;
+    margin-bottom:0;
+    bottom:-25px;
+  }
+  .process__image {
+    @extend .br;
+    margin-bottom:20px;
+    width:100%;
+    height:150px;
+    background:$d2;
+  }
+  .process__title {
+
+  }
+}
+
+.text-box {
+  margin-bottom:20px;
+}
