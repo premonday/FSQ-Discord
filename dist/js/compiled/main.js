@@ -5,9 +5,10 @@ $(function() {
   // --------------------------
   var body = $('body');
 
+});
 
-
-
+$(window).on('load', function(){
+  $('.one, .two, .three, .four').removeClass('loading');
 });
 // Avoid `console` errors in browsers that lack a console.
 (function() {

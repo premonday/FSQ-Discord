@@ -7,4 +7,9 @@
     background:$s;
     text-decoration:none;
   }
+  &.large {
+    font-size:rem(22px);
+    padding:14px 33px;
+    font-family:$f1;
+  }
 }

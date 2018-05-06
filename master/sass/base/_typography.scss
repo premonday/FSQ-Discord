@@ -4,7 +4,7 @@
 }
 
 $base-font-size: 18px;
-$f1: 'Burbank Big Condensed';
+$f1: 'Catamaran';
 $f2: 'Roboto', sans-serif;
 
 h1, h2, h3, h4, h5 {
@@ -13,11 +13,23 @@ h1, h2, h3, h4, h5 {
 
 p, i, a {
   font-family: $f2;
+  font-weight:100;
 }
 
 // Sizes
 h1 {
   font-size:rem(70px);
+  letter-spacing:-1px;
+}
+
+h2 {
+  font-size:rem(24px);
+}
+h3 {
+  font-size:rem(22px);
+}
+h5 {
+  color:$s;
 }
 
 h2.subtitle {
@@ -25,8 +37,8 @@ h2.subtitle {
   font-size:rem(20px);
   margin-bottom:35px;
   opacity:.9;
-
   line-height: $base-font-size * 1.7;
+  font-weight:100;
 }
 
 p {

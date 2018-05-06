@@ -1,5 +1,5 @@
 .process {
-  padding-top:100px;
+  padding-top:120px;
   .process__number {
     width:50px;
     height:50px;
@@ -19,11 +19,34 @@
     height:150px;
     background:$d2;
   }
-  .process__title {
-
+  .process__item h3 {
+    top:-100px;
+    position:relative;
   }
 }
 
 .text-box {
   margin-bottom:20px;
+}
+
+.one.loading, .two.loading, .three.loading, .four.loading {
+  visibility:hidden;
+  opacity:0;
+}
+.one, .two, .three, .four {
+  visibility: visible;
+  opacity:1;
+  @include t1;
+}
+.one {
+  transition-delay:.3s;
+}
+.two {
+  transition-delay:0s;
+}
+.three {
+  transition-delay:.5s;
+}
+.four {
+  transition-delay:.7s;
 }

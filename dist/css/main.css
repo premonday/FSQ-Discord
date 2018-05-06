@@ -3085,10 +3085,10 @@ h2 {
 .d1 h1, .d1 h2, .d1 h3, .d1 h4, .d1 h5, .d1 p, .d1 a, .d1 li, .d1 i, .d2 h1, .d2 h2, .d2 h3, .d2 h4, .d2 h5, .d2 p, .d2 a, .d2 li, .d2 i, .pri h1, .pri h2, .pri h3, .pri h4, .pri h5, .pri p, .pri a, .pri li, .pri i, .sec h1, .sec h2, .sec h3, .sec h4, .sec h5, .sec p, .sec a, .sec li, .sec i {
   color: white; }
 
-h2.tp {
+h2.tp, h5.tp {
   color: #4271F5; }
 
-h2.ts {
+h2.ts, h5.ts {
   color: #A261F7; }
 
 body {
@@ -3100,20 +3100,32 @@ body {
   src: url("bbc.otf"); }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Burbank Big Condensed"; }
+  font-family: "Catamaran"; }
 
 p, i, a {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
 
 h1 {
-  font-size: 3.88889rem; }
+  font-size: 3.88889rem;
+  letter-spacing: -1px; }
+
+h2 {
+  font-size: 1.33333rem; }
+
+h3 {
+  font-size: 1.22222rem; }
+
+h5 {
+  color: #A261F7; }
 
 h2.subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 1.11111rem;
   margin-bottom: 35px;
   opacity: .9;
-  line-height: 30.6px; }
+  line-height: 30.6px;
+  font-weight: 100; }
 
 p {
   font-size: 0.94444rem;
@@ -3433,11 +3445,15 @@ Overlays
 .btn {
   padding: 10px 20px;
   background: #4271F5;
-  -webkit-transition: all 250ms cubic-bezier(0.694, 0.0482, 0.335, 1);
-  transition: all 250ms cubic-bezier(0.694, 0.0482, 0.335, 1); }
+  -webkit-transition: all 0.75s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: all 0.75s cubic-bezier(0.694, 0.0482, 0.335, 1); }
   .btn:hover {
     background: #A261F7;
     text-decoration: none; }
+  .btn.large {
+    font-size: 1.22222rem;
+    padding: 14px 33px;
+    font-family: "Catamaran"; }
 
 nav {
   width: 100%;
@@ -3448,8 +3464,11 @@ nav {
     display: inline-block;
     margin-left: 30px; }
 
+.logo img {
+  width: 120px; }
+
 .process {
-  padding-top: 100px; }
+  padding-top: 120px; }
   .process .process__number {
     width: 50px;
     height: 50px;
@@ -3466,6 +3485,35 @@ nav {
     width: 100%;
     height: 150px;
     background: #102131; }
+  .process .process__item h3 {
+    top: -100px;
+    position: relative; }
 
 .text-box {
   margin-bottom: 20px; }
+
+.one.loading, .two.loading, .three.loading, .four.loading {
+  visibility: hidden;
+  opacity: 0; }
+
+.one, .two, .three, .four {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.75s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: all 0.75s cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.one {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s; }
+
+.two {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+
+.three {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s; }
+
+.four {
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s; }
